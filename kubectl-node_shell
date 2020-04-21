@@ -66,4 +66,4 @@ EOT
 )"
 
 echo "spawning \"$pod\" on \"$node\""
-kubectl run --rm --image "$image" --overrides="$overrides" -ti "$pod" $context $kubeconfig $namespace
+kubectl run --generator=run-pod/v1 --rm --image "$image" --overrides="$overrides" -ti "$pod" $context $kubeconfig $namespace
